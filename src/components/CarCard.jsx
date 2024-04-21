@@ -8,7 +8,7 @@ const CarCard = ({ title, image, description }) => {
   };
 
   return (
-    <div className="max-w-sm rounded shadow-lg mx-auto bg-stone-100 transform transition duration-500 hover:scale-105">
+    <div className="max-w-sm mx-auto rounded overflow-hidden shadow-lg m-4 bg-stone-100">
       <img className="w-full" src={image} alt={title} />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
@@ -23,8 +23,8 @@ const CarCard = ({ title, image, description }) => {
         </button>
       </div>
       {isModalOpen && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-70 h-full w-full content-center">
-          <div className="shadow-lg rounded-md bg-stone-100 max-w-lg p-4 mx-auto">
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex justify-center items-center">
+          <div className="shadow-lg rounded-md bg-stone-100 p-4 mx-auto ">
             <h2 className="font-bold text-xl mb-2">{title}</h2>
             <p>{description}</p>
             <button
